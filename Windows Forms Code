@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Rodriguez_CourseProject_Part2
+{
+    public class Employee
+    {
+        // attributes
+        private string firstName;
+        private string lastName;
+        private string ssn;
+        private DateTime hireDate;
+
+        // constructors 
+
+        public Employee()
+        {
+            firstName = "N/A";
+            lastName = "N/A";
+            ssn = "N/A";
+            hireDate = new DateTime();
+        }
+        public Employee(string firstname, string lastname, string ssn, DateTime hireDate)
+        {
+            this.firstName = firstname;
+            this.lastName = lastname;
+            this.ssn = ssn;
+            this.hireDate = hireDate;
+        }
+
+        // behaviors 
+        public override string ToString()
+        {
+            return "firstname=" + firstName
+                + ", lastName=" + lastName
+                + ", ssn=" + ssn
+                + ", hireDate=" + hireDate.ToShortDateString();
+        }
+
+        public double CalculatePay()
+        {
+            return 0;
+        }
+
+        // properties
+        public string FirstName
+        {
+            get { return firstName; }
+            set { firstName = value; }  // emp.FirstName = "Bob";
+        }
+
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+
+        public string SSN
+        {
+            get { return ssn; }
+            set { ssn = value; }
+        }
+
+        public DateTime HireDate
+        { 
+            get { return hireDate; }
+            set {  hireDate = value; }
+        }
+    }
+}
+
+
